@@ -1,5 +1,5 @@
 # stroll.js
-Scroll.js is a small jQuery plugin to quickly create animations via the scroll of the mouse (parallax).
+Stroll.js is a small jQuery plugin to quickly create animations via the scroll of the mouse (parallax).
 
 ## Animation options
 - duration [Number=1500] The duration of the animation
