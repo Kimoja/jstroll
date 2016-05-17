@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script src="../dist/stroll.js"></script>
+        
+        <style>
+
+        body {
+            height : 300vh;
+        }
+
+        .layer {
+            position : fixed;
+            height : 20vh;
+            width : 100%;
+            background:
+                radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+                radial-gradient(at 100% 100%,     rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+                #8a3;
+            background-size: 20px 20px;
+        }
+
+        </style>
+        <script>
+            $(function () {
+                $('.layer').stroll({
+                    fx : function(layer, anim){
+                        layer.el.css('background-position-x', layer.current + "px");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="layer">
+        </div>
+    </body>
+
+</html>

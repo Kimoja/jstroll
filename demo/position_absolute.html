@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script src="../dist/stroll.js"></script>
+        
+        <style>
+            
+        * {
+            margin : 0;
+            padding : 0;
+        }
+        
+        body {
+            position : relative;
+        }
+        
+        /*the .page element will be fixed, with null dimention and position */
+        .page {
+            width : 100vw; 
+        }
+        
+        .layer {
+            position : absolute;
+        }
+        
+        .layerLeft1, .layerLeft2, .layerLeft3, .layerLeft4, .layerLeft5, .layerLeft6, 
+        .layerRight1, .layerRight2, .layerRight3, .layerRight4, .layerRight5, .layerRight6 {
+            width : 20vw;
+            height : 50vh;
+            z-index : 10;
+            background : rgba(255,255,255,0.52);
+        }
+        
+        .layerLeft1, .layerLeft2, .layerLeft3, .layerLeft4, .layerLeft5, .layerLeft6 {
+            left : 5vw;
+        }
+        .layerRight1, .layerRight2, .layerRight3, .layerRight4, .layerRight5, .layerRight6 {
+            right : 5vw;
+        }
+        
+        .layerLeft1 section, .layerLeft2 section, .layerLeft3 section, .layerLeft4 section, .layerLeft5 section, .layerLeft6 section, 
+        .layerRight1 section, .layerRight2 section, .layerRight3 section, .layerRight4 section, .layerRight5 section, .layerRight6 section {
+            margin : 5vh 2vw 0 2vw;
+        }
+        
+        .layerLeft1, .layerRight1{
+            top : 0vh;
+        }
+        .layerLeft2, .layerRight2{
+            top : 50vh;
+        }
+        .layerLeft3, .layerRight3{
+            top : 100vh;
+        }
+        .layerLeft4, .layerRight4{
+            top : 150vh;
+        }
+        .layerLeft5, .layerRight5{
+            top : 200vh;
+        }
+        .layerLeft6, .layerRight6{
+            top : 250vh;
+        }
+        
+        .layerCenter1, .layerCenter2, .layerCenter3,
+        .layerCenter4, .layerCenter5, .layerCenter6 {
+            width : 100vw;
+            height : 100vh;
+            background-position : center center; 
+            background-size: cover; 
+        }
+        
+        .layerCenter1{
+            top : 0vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2013/01/21/20130121205503-816b705d.jpg) ; 
+        }
+        .layerCenter2{
+            top : 50vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2013/01/21/20130121205451-42974a14.jpg) ; 
+        }
+        .layerCenter3{
+            top : 100vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2012/10/21/20121021194311-bd19f9cc.jpg) ; 
+        }
+        .layerCenter4{
+            top : 150vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2012/07/14/20120714161621-ed0fb1e5.jpg) ; 
+        }
+        .layerCenter5{
+            top : 200vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2012/07/14/20120714161107-56895a90.jpg) ; 
+        }
+        .layerCenter6{
+            top : 250vh;
+            background-image : url(http://iwallpapers.free.fr/upload/2012/07/14/20120714161311-a9e64bdd.jpg) ; 
+        }
+        
+        </style>
+        <script>
+            $(function () {
+                
+                var fxPosition = {
+                    origin : function(el){
+                        return el.offset().top;
+                    },
+                    init : function(layer){
+                        layer.el.css('top', layer.origin + 'px');
+                    },
+                    current : function(layer, anim){
+                        layer.el.css('top',layer.origin +  ((layer.origin - layer.current))  + 'px');
+                    }
+                };
+                
+                function elasticOut(k){
+                    var s, a = 0.1,
+                        p = 0.4;
+                    if(k === 0) return 0;
+                    if(k === 1) return 1;
+                    if(!a || a < 1) {
+                        a = 1;
+                        s = p / 4;
+                    } else s = p * Math.asin(1 / a) / (2 * Math.PI);
+                    return(a * Math.pow(2, -10 * k) * Math.sin((k - s) * (2 * Math.PI) / p) + 1);
+                }
+               
+                $(document.body).height($(document.body).prop('scrollHeight'));
+                
+                $('.layerLeft1, .layerLeft2, .layerLeft3, .layerLeft4, .layerLeft5, .layerLeft6,'
+                    + '.layerRight1, .layerRight2, .layerRight3, .layerRight4, .layerRight5, .layerRight6').stroll({
+                    interpolation : elasticOut,
+                    duration : 6000,
+                    fx : fxPosition
+                })
+               
+                $('.layerCenter1, .layerCenter2, .layerCenter3, .layerCenter4, .layerCenter5, .layerCenter6').stroll({
+                    fx : fxPosition
+                });
+                
+                $('.page').css({
+                    position : 'fixed'
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        
+        <div class="page">
+            
+            <div class="layer layerLeft1">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerLeft2">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerLeft3">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            
+            <div class="layer layerLeft4">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerLeft5">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerLeft6">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            
+            <div class="layer layerCenter1" data-stroll-velocity="1.5"></div>
+            <div class="layer layerCenter2" data-stroll-velocity="1.4"></div>
+            <div class="layer layerCenter3" data-stroll-velocity="1.3"></div>
+            <div class="layer layerCenter4" data-stroll-velocity="1.2"></div>
+            <div class="layer layerCenter5" data-stroll-velocity="1.1"></div>
+            <div class="layer layerCenter6" data-stroll-velocity="1"></div>
+            
+            
+            <div class="layer layerRight1">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerRight2">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerRight3">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            
+            <div class="layer layerRight4">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerRight5">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            <div class="layer layerRight6">
+                <section>
+                    <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+                </section>
+            </div>
+            
+        </div>
+        
+    </body>
+
+</html>

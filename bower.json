@@ -1,0 +1,22 @@
+{
+  "name": "stroll",
+  "authors": [
+    "kimojasan <kimojasan@gmail.com>"
+  ],
+  "description": "Scrolling animation",
+  "main": "dist/stroll.js",
+  "keywords": [
+    "scroll",
+    "animation"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.0.0"
+}

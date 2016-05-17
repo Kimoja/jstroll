@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script src="../dist/stroll.js"></script>
+        
+        <style>
+        body {
+            height : 300vh;
+        }
+
+        .layer {
+            position : fixed;
+            height : 100vh;
+            line-height: 100vh;
+            width : 100%;
+            text-align : center;
+            font-size : 25px;
+        }
+        </style>
+        
+        <script>
+            $(function () {
+                $('.layer').stroll({
+                    fx : [function(layer, anim){
+                        layer.el.css('transform', "rotate(" + layer.current + "deg) translateX(" + (layer.current / 10) + "px) translateY(" + (layer.current / 10) + "px)");
+                        layer.el.css('text-shadow', (layer.current / 10) + "px " + (layer.current / 10) + "px " + (layer.current / 50) + "px rgba(0,0,0,0.5)");
+                        layer.el.css('font-size', (layer.current / 100) + 25 + "px");
+                    }]
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="layer">
+            STROLL !!!! HELLO WORLD 
+        </div>
+    </body>
+
+</html>

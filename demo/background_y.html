@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+        <script src="../dist/stroll.js"></script>
+        
+        <style>
+
+        section { 
+          padding: 5% 5%;
+          margin: 0 auto;
+        }
+        
+        .layer{
+            height:400px;
+            overflow: hidden;
+            text-align : center;
+            margin: 0 auto;
+            position : relative;
+            background-size: cover; 
+            background-attachment:  fixed; 
+            background-repeat: no-repeat;
+            background-position-x: center;
+        }
+
+        .layer1 {
+            background-image : url(http://iwallpapers.free.fr/upload/2013/01/21/20130121205503-816b705d.jpg) ; 
+        }
+        .layer2 {
+            background-image : url(http://iwallpapers.free.fr/upload/2013/01/21/20130121205451-42974a14.jpg) ; 
+        }
+        .layer3 {
+            background-image : url(http://iwallpapers.free.fr/upload/2012/10/21/20121021194311-bd19f9cc.jpg) ; 
+        }
+        .layer4 {
+            background-image : url(http://iwallpapers.free.fr/upload/2012/07/14/20120714161621-ed0fb1e5.jpg) ; 
+        }
+        .layer5 {
+            background-image : url(http://iwallpapers.free.fr/upload/2012/07/14/20120714161107-56895a90.jpg) ; 
+        }
+
+        </style>
+        <script>
+            $(function () {
+                $('.layer').stroll({
+                    fx : function(layer, anim){
+                        layer.el.css('background-position-y', (layer.current - anim.scrollPos)  + "px");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+        
+        <div class="layer layer1">
+        </div>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+        
+        <div class="layer layer2">  
+        </div>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+
+        <div class="layer layer3"> 
+        </div>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+        <div class="layer layer4"> 
+        </div>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+        <div class="layer layer5"> 
+        </div>
+        <section>
+            <p>Pid ultrices mid ultrices aliquet porttitor. Tristique est turpis lacus. Nec mid, nisi eu magnis? Phasellus? Facilisis sed urna integer in. Pulvinar! Lacus enim dapibus facilisis, sociis ut turpis habitasse nunc a egestas placerat in mattis! Turpis sed? Sit pid magna sociis vel a porttitor, enim ac! Porttitor, lorem odio a tincidunt urna scelerisque, augue. Cursus, et penatibus, ridiculus tortor.</p>
+
+            <p>Urna sed lorem a mus duis cras mattis turpis arcu facilisis mattis tincidunt sagittis lorem, elit elit porttitor turpis? Risus purus! Mus urna tortor adipiscing dictumst, purus, sit turpis, amet mid nisi non hac in proin nunc turpis velit non mauris turpis natoque, aliquam, ac dictumst parturient lundium pulvinar est integer augue scelerisque scelerisque ultrices nascetur amet odio? Hac.</p>
+        </section>
+    </body>
+
+</html>
