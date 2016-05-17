@@ -44,8 +44,8 @@
         <script>
             $(function () {
                 $('.layer').stroll({
-                    fx : function(layer, anim){
-                        layer.el.css('background-position-y', (layer.current - anim.scrollPos)  + "px");
+                    fx : function(layer){
+                        layer.el.css('background-position-y', (layer.current - layer.anim.scrollPos)  + "px");
                     }
                 });
             });

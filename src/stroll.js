@@ -22,7 +22,7 @@
         interpolation : function sinInterpolation(t) {
             return Math.sin(t * Math.PI / 2);
         },
-        fx : [function(layer, anim){
+        fx : [function(layer){
             layer.el.css('background-position-y', (layer.current - anim.scrollPos) + 'px');
         }]
     };
@@ -72,7 +72,7 @@
                     };
                 fxs.push(layer);
                 if(this.init){
-                    this.init(layer, el);
+                    this.init(layer);
                 }
             });
             anim.layers.push(fxs);
@@ -98,7 +98,7 @@
             $.each(anim.layers, function () {
                 $.each(this, function(){
                     this.current = Math.round(this.last + this.offset * anim.state);
-                    this.fx.current(this, anim);
+                    this.fx.current(this);
                 });
             });
             

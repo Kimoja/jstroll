@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"  integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
         <script src="../dist/stroll.js"></script>
         
         <style>
@@ -23,9 +22,7 @@
         <script>
             $(function () {
                 $('.layer').stroll({
-                    fx : [function(layer, anim){
-                        layer.el.css('transform', "rotate(" + layer.current + "deg) translateX(" + (layer.current / 10) + "px) translateY(" + (layer.current / 10) + "px)");
-                        layer.el.css('text-shadow', (layer.current / 10) + "px " + (layer.current / 10) + "px " + (layer.current / 50) + "px rgba(0,0,0,0.5)");
+                    fx : [function(layer){
                         layer.el.css('font-size', (layer.current / 100) + 25 + "px");
                     }]
                 });
@@ -37,5 +34,4 @@
             STROLL !!!! HELLO WORLD 
         </div>
     </body>
-
 </html>

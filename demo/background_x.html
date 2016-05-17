@@ -26,8 +26,8 @@
         <script>
             $(function () {
                 $('.layer').stroll({
-                    fx : function(layer, anim){
-                        layer.el.css('background-position-x', layer.current + "px");
+                    fx : function(layer){
+                        layer.el.css('background-position-x', anim.layer.current + "px");
                     }
                 });
             });
