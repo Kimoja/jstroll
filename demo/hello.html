@@ -23,6 +23,8 @@
             $(function () {
                 $('.layer').stroll({
                     fx : [function(layer){
+                        layer.el.css('transform', "rotate(" + layer.current + "deg) translateX(" + (layer.current / 10) + "px) translateY(" + (layer.current / 10) + "px)");
+                        layer.el.css('text-shadow', (layer.current / 10) + "px " + (layer.current / 10) + "px " + (layer.current / 50) + "px rgba(0,0,0,0.5)");
                         layer.el.css('font-size', (layer.current / 100) + 25 + "px");
                     }]
                 });
