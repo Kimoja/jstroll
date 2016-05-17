@@ -1,22 +1,23 @@
 {
-  "name": "stroll",
-  "authors": [
-    "kimojasan <kimojasan@gmail.com>"
-  ],
-  "description": "Scrolling animation",
-  "main": "dist/stroll.js",
-  "keywords": [
-    "scroll",
-    "animation"
-  ],
-  "license": "MIT",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "version": "1.0.0"
+    "name": "stroll",
+    "authors": [
+        "kimojasan <kimojasan@gmail.com>"
+    ],
+    "description": "Scrolling animation/parallax",
+    "main": "dist/stroll.js",
+    "keywords": [
+        "scroll",
+        "animation",
+        "parallax"
+    ],
+    "license": "MIT",
+    "ignore": [
+        ".*",
+        "gulpfile.js",
+        "*.json"
+    ],
+    "dependencies": {
+        "jquery": ">=1.3.0"
+    },
+    "version": "1.0.0"
 }

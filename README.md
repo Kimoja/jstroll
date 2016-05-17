@@ -29,13 +29,13 @@ Scroll.js is a small jQuery plugin to quickly create animations via the scroll o
 - fx [Fx] The Fx object
 
 ### Additional Animation property
-interval [Number] The index of the current interval
-frames [Number] The number of frame
-startTime [Number] 
-endTime [Number] 
-currentTime [Number] 
-scrollPos [Number] The current scrolling position
-state [Number]  The interpolated state (0 >= <= 1)
+- interval [Number] The index of the current interval
+- frames [Number] The number of frame
+- startTime [Number] 
+- endTime [Number] 
+- currentTime [Number] 
+- scrollPos [Number] The current scrolling position
+- state [Number]  The interpolated state (0 >= <= 1)
 
 ## Example
 ```html
