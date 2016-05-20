@@ -44,7 +44,7 @@ jstroll.js is a small jQuery plugin to quickly create animations with the scroll
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-2.2.3.min.js"  integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-        <script src="../dist/stroll.js"></script>
+        <script src="../dist/jstroll.js"></script>
         
         <style>
         body {
@@ -63,7 +63,7 @@ jstroll.js is a small jQuery plugin to quickly create animations with the scroll
         
         <script>
             $(function () {
-                $('.layer').stroll({
+                $('.layer').jstroll({
                     fx : [function(layer, anim){
                         layer.el.css('font-size', (layer.current / 100) + 25 + "px");
                     }]
