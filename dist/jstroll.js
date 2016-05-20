@@ -1,5 +1,5 @@
 /*!
- * jstroll.js v1.0.2
+ * jstroll.js v1.0.3
  * (c) 2016 Joakim Carrilho (Kimoja - https://github.com/Kimoja) 
  * Released under the MIT License.
  */

@@ -129,8 +129,8 @@
                     this.current = Math.round(this.last + this.offset * anim.state);
                     this.fx.current(this);
                 });
-            });
-        }  
+            }); 
+        }     
         
         /**
          * Function called every frame of the animation
