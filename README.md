@@ -1,6 +1,11 @@
 # jstroll.js
 jstroll.js is a small jQuery plugin to quickly create animations with the scroll of the mouse (parallax).
 
+## Installation
+```bash
+bower install jstroll
+```
+
 ## Animation options
 - animate [Boolean=true] Create or not a scrolling animation
 - duration [Number=1500] The duration of the animation
