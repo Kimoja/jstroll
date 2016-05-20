@@ -6,7 +6,7 @@
         //Create or not a scrolling animation
         animate : true,
         //The duration of the animation
-        duration : 1500,
+        duration : 1500, 
         //Frame peer second
         frameRate : 1, 
         //The scrolling container
