@@ -73,7 +73,7 @@ jstroll.js is a small jQuery plugin to quickly create animations with the scroll
     </head>
     <body>
         <div class="layer">
-            STROLL !!!! HELLO WORLD 
+            JSTROLL !!!! HELLO WORLD 
         </div>
     </body>
 </html>
