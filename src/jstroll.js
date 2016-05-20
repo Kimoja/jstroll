@@ -8,7 +8,7 @@
         //The duration of the animation
         duration : 1500,
         //Frame peer second
-        frameRate : 1,
+        frameRate : 1, 
         //The scrolling container
         container : win,
         //Coefficient to be applied to the initial scrolling
@@ -16,7 +16,7 @@
         //The callback called at the beginning of the scroll
         on : null,
         //The callback called on the end of the scroll
-        off : null,
+        off : null, 
         //The callback invoked on the change scroll, but when the animation is not completed
         scroll : null,
         //The callback called when the size of the window change
