@@ -84,7 +84,7 @@
         anim.layers = [];
         
         //fill the anim.layers array
-        anim.els.each(function () {
+        anim.els.each(function () { 
             var el = this,
                 fxs = [];
             $.each(anim.fx, function(){
