@@ -3,7 +3,7 @@
     <head>
         
         <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-        <script src="../dist/stroll.js"></script>
+        <script src="../dist/jstroll.js"></script>
         
         <style>
             
@@ -129,13 +129,13 @@
                 $(document.body).height($(document.body).prop('scrollHeight'));
                 
                 $('.layerLeft1, .layerLeft2, .layerLeft3, .layerLeft4, .layerLeft5, .layerLeft6,'
-                    + '.layerRight1, .layerRight2, .layerRight3, .layerRight4, .layerRight5, .layerRight6').stroll({
+                    + '.layerRight1, .layerRight2, .layerRight3, .layerRight4, .layerRight5, .layerRight6').jstroll({
                     interpolation : elasticOut,
                     duration : 6000,
                     fx : fxPosition
                 }).css('position', 'fixed');
                
-                $('.layerCenter1, .layerCenter2, .layerCenter3, .layerCenter4, .layerCenter5, .layerCenter6').stroll({
+                $('.layerCenter1, .layerCenter2, .layerCenter3, .layerCenter4, .layerCenter5, .layerCenter6').jstroll({
                     fx : fxPosition
                 }).css('position', 'fixed');
                  

@@ -1,7 +1,8 @@
-# stroll.js
-Stroll.js is a small jQuery plugin to quickly create animations via the scroll of the mouse (parallax).
+# jstroll.js
+jstroll.js is a small jQuery plugin to quickly create animations with the scroll of the mouse (parallax).
 
 ## Animation options
+- animate [Boolean=true] Create or not a scrolling animation
 - duration [Number=1500] The duration of the animation
 - frameRate [Number=1] Frame peer second
 - container [jQuery=$(window)] The scrolling container
@@ -10,8 +11,8 @@ Stroll.js is a small jQuery plugin to quickly create animations via the scroll o
 - off [Function] The callback called on the end of the scroll
 - scroll [Function] The callback invoked on the change scroll, but when the animation is not completed
 - resize [Function] The callback called when the size of the window change
-- loop [Function] The callback called every interval
-- interpolation [Function] The interpolation function of the time remaining to animate
+- loop [Function] The callback called every frame
+- interpolation [Function] The interpolation function of the animation state
 - fx [Object|Function<Layer>] The transformation function or animated object (see fx)
 
 ## Fx options
@@ -20,10 +21,10 @@ Stroll.js is a small jQuery plugin to quickly create animations via the scroll o
 - current [Function<Layer] The transform function
 
 ## Layer options
-- el [HTMLElement] The html element
-- velocity [Number] 
-- origin  [Number] 
-- current [Number] The current camputed value, correspond to the addition aof the origin value more the interpolated state of du défilement 
+- el [jQuery] The jquery element
+- velocity [Number] Coefficient to be applied to the initial scrolling
+- origin  [Number] the origin value of the element style attribute
+- current [Number] The current computed value, corresponding to the addition of the origin value more the interpolated state of the scrolling 
 - last [Number] The lasted computed value
 - anim [Animation] The Animation object
 - fx [Fx] The Fx object
@@ -31,11 +32,11 @@ Stroll.js is a small jQuery plugin to quickly create animations via the scroll o
 ### Additional Animation property
 - interval [Number] The index of the current interval
 - frames [Number] The number of frame
-- startTime [Number] 
-- endTime [Number] 
-- currentTime [Number] 
+- startTime [Number] The date of the beginning of the animation
+- endTime [Number] The end date of the animation
+- currentTime [Number] The current date
 - scrollPos [Number] The current scrolling position
-- state [Number]  The interpolated state (0 >= <= 1)
+- state [Number]  The interpolated state (0 >= ? <= 1)
 
 ## Example
 ```html
