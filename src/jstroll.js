@@ -130,7 +130,7 @@
                     this.fx.current(this);
                 });
             });
-        }
+        }  
         
         /**
          * Function called every frame of the animation

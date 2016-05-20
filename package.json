@@ -1,7 +1,7 @@
 {
     "name": "jstroll",
     "title": "jstroll",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "jstroll.js is a small jQuery plugin to quickly create animations with the scroll of the mouse (parallax).",
     "main": "index.js",
     "scripts": {
