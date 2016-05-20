@@ -95,7 +95,7 @@
                         //The jquery element
                         el : el,
                         //Coefficient to be applied to the initial scrolling
-                        velocity : Number(el.data('stroll-velocity')) || anim.velocity,
+                        velocity : Number(el.data('jstroll-velocity')) || anim.velocity,
                         //the origin value of the element style attribute
                         origin : origin,
                         //The current computed value, corresponding to the addition of the origin value 
