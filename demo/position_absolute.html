@@ -102,8 +102,8 @@
             $(function () {
                 
                 var fxPosition = {
-                    origin : function(el){
-                        return el.offset().top;
+                    origin : function(layer){
+                        return layer.el.offset().top;
                     },
                     init : function(layer){
                         layer.el.css('top', layer.origin + 'px');

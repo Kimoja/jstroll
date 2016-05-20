@@ -85,29 +85,30 @@
         
         //fill the anim.layers array
         anim.els.each(function () {
-            
             var el = this,
                 fxs = [];
             $.each(anim.fx, function(){
+                var layer = {
+                    //The jquery element
+                    el : el,
+                    //Coefficient to be applied to the initial scrolling
+                    velocity : Number(el.data('jstroll-velocity')) || anim.velocity,
+                    //the origin value of the element style attribute
+                    origin : 0,
+                    //The current computed value, corresponding to the addition of the origin value 
+                    //more the interpolated state of the scrolling 
+                    current : 0,
+                    //The lasted computed value
+                    last : 0,
+                    //The Animation object
+                    anim : anim,
+                    //The Fx object
+                    fx : this
+                };
+                
                 //retrieve the origin value of the element style attribute
-                var origin = this.origin ? this.origin(el) : 0,
-                    layer = {
-                        //The jquery element
-                        el : el,
-                        //Coefficient to be applied to the initial scrolling
-                        velocity : Number(el.data('jstroll-velocity')) || anim.velocity,
-                        //the origin value of the element style attribute
-                        origin : origin,
-                        //The current computed value, corresponding to the addition of the origin value 
-                        //more the interpolated state of the scrolling 
-                        current : origin,
-                        //The lasted computed value
-                        last : 0,
-                        //The Animation object
-                        anim : anim,
-                        //The Fx object
-                        fx : this
-                    };
+                layer.origin = layer.current = this.origin ? this.origin(layer) : 0;
+                
                 fxs.push(layer);
                 if(this.init){
                     this.init(layer);
